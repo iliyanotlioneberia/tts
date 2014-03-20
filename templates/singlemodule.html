@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+        <div id="studentslist">
+                <h2>Students from {{ students.0.module }}</h2>
+                {% for student in students %}
+                <p><a href="/students/{{ student.slug }}/">{{ student }}</a></p>
+                {% endfor %}
+        </div>
+{% endblock %}

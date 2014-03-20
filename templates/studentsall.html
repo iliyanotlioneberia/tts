@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="studentslist">
+  {% for student in students %}
+  <p><a href="/students/{{ student.slug }}/"><img src="{{ student.image.url }}" />{{ student }}</a></p>
+  {% endfor %}
+</div>
+{% endblock %}

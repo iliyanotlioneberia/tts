@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="singlestudent">
+  <p>Name: {{ student }}</p>
+  <p>Student Number: {{ student.stnumber }}</p>
+  <p>Notes: {{ student.notes }}</p>   
+  <p>Module: <a href="/modules/{{ student.module.slug }}/">{{ student.module }}</a></p>
+</div>
+{% endblock %}
